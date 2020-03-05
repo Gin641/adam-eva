@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adam và eva</title>
+</head>
+<body>
+<script>
+    let Apple = function(weight){
+        this.weight = weight;
+        this.getWeight = function () {
+            return this.weight
+        };
+        this.decrease = function () {
+            if (this.weight < 0){
+                this.weight--;
+            }
+        }
+    };
+    let Human = function (name, gerder, weight) {
+        this.name = name;
+        this.gerder = gerder;
+        this.weight = weight;
+        this.getName = function () {
+            return this.name
+        };
+        this.getGerder = function () {
+            return this.gerder
+        };
+        this.getWeight = function () {
+            return this.weight
+        };
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.setGerder = function (gerder) {
+            this.gerder = gerder;
+        };
+        this.setWeight = function (weight) {
+            this.weight = weight;
+        };
+        this.eat = function () {
+            this.weight++;
+        };
+        this.say = function () {
+            if (this.eat){
+                alert("xin chào");
+            }
+        };
+    };
+    let apple = new Apple(10);
+    let adam = new Human("Adam", "man", 60);
+    adam.say(adam.eat());
+    console.log("cân nặng: " + adam.weight + "<br>");
+    let eva = new Human("Eva", "girl", 46);
+    eva.say(eva.eat());
+    console.log("cân nặng: " + eva.weight + "<br>");
+</script>
+</body>
+</html>
